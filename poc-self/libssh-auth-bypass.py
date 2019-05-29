@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+# -*- coding:utf-8 -*-
 import paramiko
 import socket
 import argparse
@@ -27,9 +27,5 @@ def poc(url):
 		#out.close()
 		#print(output)
 		return True
-	except paramiko.SSHException as e:
-		#print("Administratively prohibited : \"Channel Not Opened\" or \"TCPForwarding disabled on remote/local server can't connect.\".Not Vulnerable")
-		return False
-	except socket.error:
-		#print("Unable to connect.")
+	except:
 		return False
